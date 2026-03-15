@@ -7,7 +7,8 @@ Creates config files and a .bat file to run the full training.
 
 Currently works on Windows, pull requests for Linux support are welcome.
 
-A working installation of musubi ltx-2 fork is needed.
+A working installation of musubi ltx-2 fork is needed. You can find instructions for that
+in [this issue of the fork](https://github.com/AkaneTendo25/musubi-tuner/discussions/19).
 
 ## Usage
 
