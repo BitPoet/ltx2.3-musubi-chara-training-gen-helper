@@ -14,7 +14,7 @@ in [this issue of the fork](https://github.com/AkaneTendo25/musubi-tuner/discuss
 
 ### Installation
 
-Download or clone the files of the repository into a new folder "training" inside your musubi directory.
+Download or clone the files of the repository into a new folder "trainings" inside your musubi directory.
 
 ### One-Time Setup
 
