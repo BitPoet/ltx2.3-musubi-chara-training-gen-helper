@@ -17,21 +17,21 @@ Download or clone the files of the repository into a new folder "training" insid
 
 ### One-Time Setup
 
-Run ```training\_gen.py --setup --checkpoint PATH-TO-LTX-2.3-DEV --gemma PATH-TO-GEMMA-TEXT-ENCODER```.
+Run ```training_gen.py --setup --checkpoint PATH-TO-LTX-2.3-DEV --gemma PATH-TO-GEMMA-TEXT-ENCODER```.
 
 If you enter a non-existing path to a file, you will receive an error.
 
-The values will be saved in base\_settings.json. If you move your models, rerun ```training\_gen.py --setup``` or edit base\_settings.json directly.
+The values will be saved in base_settings.json. If you move your models, rerun ```training_gen.py --setup``` or edit base_settings.json directly.
 
 ### Generate Training Setup
 
-Run ```training\_gen.py --new --dataset PATH-TO-DATASET --name LORA-NAME```
+Run ```training_gen.py --new --dataset PATH-TO-DATASET --name LORA-NAME```
 
 This will generate:
 
-* A file dataset\_LORA-NAME.toml in the current directory
-* A file training\_args\_LORA-NAME.toml in the current directory
-* A file train\_LORA-NAME.bat in the current directory
+* A file dataset_LORA-NAME.toml in the current directory
+* A file training_args_LORA-NAME.toml in the current directory
+* A file train_LORA-NAME.bat in the current directory
 
 #### Additional Parameters
 
@@ -92,7 +92,7 @@ by running "showlogs.bat LORA-NAME".
 * GEMMA_PATH
   The full path to the directory in which gemma-3-12b-it-qat-q4_0-unquantized is stored.
 * DATASET_CONFIG_PATH
-  Full path to the dataset\_LORA_NAME.toml file, automatically set.
+  Full path to the dataset_LORA_NAME.toml file, automatically set.
 * GPU_ID
   Integer ID of the GPU to use. Will be added as "--gpu_ids GPU_ID" to trainLORA-NAME.bat.
 * DATASET_PATH
