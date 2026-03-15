@@ -43,23 +43,23 @@ This will generate:
 
 You can override some default parameters when you set up training:
 
-* blocks_to_swap N
-  Defaults to 4, you can lower that to speed up training if you have enough VRAM.
-* network_dim N
-  Defaults to 64, lower value means smaller LoRA, you can experiment with setting
-  this to 32 or 16.
-* max_steps N
-  Defaults to 4000, the LoRA often converges sufficiently around 3000 steps.
-* save_every N
-  Defaults to 250, but if you want to save space, you can raise this number.
-  This saves a checkpoint of the LoRA every N training steps, so you can
-  test how well the LoRA works at different steps and cherry-pick the one
-  with best prompt adherence and visual identity.
-* gpu N
-  If you have multiple GPUs, you may need to bind musubi to a specific GPU.
-  This is the same numeric id (0, 1, ...) you'd use for ComfyUI.
-* lr FLOAT
-  Learning rate. Defaults to 7e-5, which has been found to work well.
+* --blocks_to_swap N \
+      Defaults to 4, you can lower that to speed up training if you have enough VRAM.
+* --network_dim N \
+      Defaults to 64, lower value means smaller LoRA, you can experiment with setting
+      this to 32 or 16.
+* --max_steps N \
+      Defaults to 4000, the LoRA often converges sufficiently around 3000 steps.
+* --save_every N \
+      Defaults to 250, but if you want to save space, you can raise this number.
+      This saves a checkpoint of the LoRA every N training steps, so you can
+      test how well the LoRA works at different steps and cherry-pick the one
+      with best prompt adherence and visual identity.
+* --gpu N \
+      If you have multiple GPUs, you may need to bind musubi to a specific GPU.
+      This is the same numeric id (0, 1, ...) you'd use for ComfyUI.
+* --lr FLOAT \
+      Learning rate. Defaults to 7e-5, which has been found to work well.
 
 
 ### Train
