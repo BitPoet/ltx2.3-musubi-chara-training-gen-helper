@@ -1,0 +1,49 @@
+# Model paths
+ltx2_checkpoint = "##CHECKPOINT_PATH##"
+gemma_root = "##GEMMA_PATH##"
+dataset_config = "##DATASET_CONFIG_PATH##"
+
+# LTX-2 image training uses video mode (images are treated as 1-frame samples).
+ltx_mode = "video"
+ltx_version = "2.3"
+ltx_version_check_mode = "error"
+lora_target_preset = "full"
+
+# Cache settings
+cache_text_encoder_outputs = true
+cache_text_encoder_outputs_to_disk = false
+
+# Memory and speed
+fp8_base = true
+fp8_scaled = true
+sdpa = true
+gradient_checkpointing = true
+gradient_accumulation_steps = 1
+blocks_to_swap = 4
+
+# Optimizer and scheduler
+optimizer_type = "AdamW8Bit"
+learning_rate = ##LR##
+lr_scheduler = "constant_with_warmup"
+lr_warmup_steps = 100
+
+# Network settings
+network_module = "networks.lora_ltx2"
+network_dim = ##NETWORKDIM##
+network_alpha = ##NETWORKALPHA##
+timestep_sampling = "shifted_logit_normal"
+ltx2_first_frame_conditioning_p = 0.5
+
+# Output and logging
+output_dir = "##DATASET_PATH##/output"
+output_name = "##LORA_NAME##"
+log_with = "tensorboard"
+logging_dir = "##DATASET_PATH##/logs"
+log_config = true
+log_prefix = "##LORA_NAME##_##TS##"
+max_train_steps = ##MAXSTEPS##
+save_every_n_steps = ##SAVEEVERY##
+save_model_as = "safetensors"
+mixed_precision = "bf16"
+save_state = true
+save_state_on_train_end = true

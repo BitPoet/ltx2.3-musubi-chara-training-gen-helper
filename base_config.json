@@ -1,0 +1,9 @@
+{
+	"CHECKPOINT_PATH":"M:/99_ComfyLTX2/models/checkpoints/LTX-2.3/ltx-2.3-22b-dev.safetensors",
+	"GEMMA_PATH":"M:/99_ComfyLTX2/models/text_encoders/gemma-3-12b-it-qat-q4_0-unquantized",
+	"GPU_ID":false,
+	"LR":"7e-5",
+	"MAXSTEPS":"3000",
+	"SAVEEVERY":"250",
+	"NETWORKDIM":"64"
+}
