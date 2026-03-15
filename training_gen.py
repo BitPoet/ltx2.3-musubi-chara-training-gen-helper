@@ -7,11 +7,15 @@ import re
 
 CONFIG_FILE = "base_config.json"
 
-def get_config():
+from typing import Any, Dict
+
+def get_config() -> Dict[str, Any]:
     if os.path.exists(CONFIG_FILE):
         try:
             with open(CONFIG_FILE, "r", encoding="utf-8") as f:
-                return json.load(f)
+                config = json.load(f)
+                if isinstance(config, dict):
+                    return config
         except Exception as e:
             print(f"Error loading {CONFIG_FILE}: {e}")
             return {}
@@ -103,7 +107,6 @@ def new_training(args):
     replace_dict = {
         "TS": ts,
         "NETWORKALPHA": str(network_alpha),
-        "ALPHADIM": str(network_alpha),
         "LORA_NAME": args.name,
     }
     
