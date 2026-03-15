@@ -25,7 +25,13 @@ The values will be saved in base_settings.json. If you move your models, rerun `
 
 ### Generate Training Setup
 
-Run ```training_gen.py --new --dataset PATH-TO-DATASET --name LORA-NAME```
+Open a command shell and cd into musubi folder.
+
+Activate the venv.
+
+```cd``` into the *trainings* folder.
+
+Run ```.\training_gen.py --new --dataset PATH-TO-DATASET --name LORA-NAME```
 
 This will generate:
 
@@ -58,7 +64,7 @@ You can override some default parameters when you set up training:
 
 ### Train
 
-Run ```trainLORA-NAME.bat```
+From within the *trainings* folder, run ```.\trainLORA-NAME.bat```
 
 This will run all three steps of training with musubi in sequence:
 
